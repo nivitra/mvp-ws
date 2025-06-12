@@ -1,0 +1,11 @@
+Feature,Traditional Approach,Our Platform Approach,Benefits
+Registration System,"Static forms, manual processing","Dynamic forms, auto-validation","Faster registration, better UX"
+Authentication,Username/password only,"Email + OTP, SSO support","Enhanced security, easier access"
+Content Flow UI,Basic file listing,Interactive module progression,Better learning experience
+AI Chatbot,Rule-based responses,Context-aware AI responses,"Instant, relevant help"
+Real-time Summarizer,Manual note-taking,Whisper + Gemini live summaries,"Live insights, better retention"
+Attendee Tracking,Basic login tracking,Real-time engagement metrics,Data-driven improvements
+Feedback Forms,Post-event emails,Integrated feedback system,Higher response rates
+Certificate Generation,Manual certificate creation,Automated PDF generation,Instant gratification
+Embeddable Widget,Full page redirects,Seamless iframe embedding,Brand consistency
+Real-time Analytics,Basic attendance reports,Live dashboard with insights,Real-time optimization

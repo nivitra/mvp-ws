@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Management Platform - XClub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex items-center justify-between">
+            <div class="flex items-center gap-16">
+                <div class="logo">
+                    <h1 class="logo-text">XClub Workshop</h1>
+                </div>
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-section="dashboard">Dashboard</button>
+                    <button class="nav-item" data-section="registration">Registration</button>
+                    <button class="nav-item" data-section="content">Content</button>
+                    <button class="nav-item" data-section="tracking">Tracking</button>
+                    <button class="nav-item" data-section="feedback">Feedback</button>
+                </nav>
+            </div>
+            <div class="flex items-center gap-16">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="user-status">
+                    <span class="status status--success">Live</span>
+                    <span class="user-name">Dr. Sarah Johnson</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="section active">
+                    <div class="section-header">
+                        <h2>Workshop Dashboard</h2>
+                        <p>Advanced React Development Workshop - Live Session</p>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="card stats-card">
+                            <div class="card__body">
+                                <h3>Live Participants</h3>
+                                <div class="stat-number" id="liveCount">347</div>
+                                <div class="stat-change">+12 in last 5 min</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card stats-card">
+                            <div class="card__body">
+                                <h3>Workshop Progress</h3>
+                                <div class="stat-number">60%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card stats-card">
+                            <div class="card__body">
+                                <h3>Average Engagement</h3>
+                                <div class="stat-number">85%</div>
+                                <div class="stat-change">↑ 5% from last hour</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card activity-feed">
+                            <div class="card__header">
+                                <h3>Recent Activity</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="activity-list" id="activityFeed">
+                                    <div class="activity-item">
+                                        <span class="activity-time">2 min ago</span>
+                                        <span class="activity-text">Alex Chen completed Module 2</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-time">5 min ago</span>
+                                        <span class="activity-text">15 new participants joined</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-time">8 min ago</span>
+                                        <span class="activity-text">Q&A session started</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Registration Section -->
+                <section id="registration" class="section">
+                    <div class="section-header">
+                        <h2>Workshop Registration</h2>
+                        <p>Multi-step registration process with verification</p>
+                    </div>
+                    
+                    <div class="registration-container">
+                        <div class="progress-steps">
+                            <div class="step active" data-step="1">
+                                <span class="step-number">1</span>
+                                <span class="step-label">Personal Info</span>
+                            </div>
+                            <div class="step" data-step="2">
+                                <span class="step-number">2</span>
+                                <span class="step-label">Professional Details</span>
+                            </div>
+                            <div class="step" data-step="3">
+                                <span class="step-number">3</span>
+                                <span class="step-label">Verification</span>
+                            </div>
+                        </div>
+                        
+                        <form class="registration-form" id="registrationForm">
+                            <!-- Step 1 -->
+                            <div class="form-step active" data-step="1">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Location</label>
+                                    <input type="text" class="form-control" name="location" placeholder="City, Country">
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2 -->
+                            <div class="form-step" data-step="2">
+                                <div class="form-group">
+                                    <label class="form-label">Job Title</label>
+                                    <input type="text" class="form-control" name="jobTitle">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Company</label>
+                                    <input type="text" class="form-control" name="company">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Experience Level</label>
+                                    <select class="form-control" name="experience">
+                                        <option value="">Select level</option>
+                                        <option value="beginner">Beginner (0-2 years)</option>
+                                        <option value="intermediate">Intermediate (2-5 years)</option>
+                                        <option value="advanced">Advanced (5+ years)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">How did you hear about this workshop?</label>
+                                    <select class="form-control" name="source">
+                                        <option value="">Select source</option>
+                                        <option value="social">Social Media</option>
+                                        <option value="email">Email Newsletter</option>
+                                        <option value="referral">Friend/Colleague</option>
+                                        <option value="website">Website</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3 -->
+                            <div class="form-step" data-step="3">
+                                <div class="verification-section">
+                                    <h3>Email Verification</h3>
+                                    <p>We've sent a verification code to your email address.</p>
+                                    <div class="form-group">
+                                        <label class="form-label">Verification Code</label>
+                                        <input type="text" class="form-control" name="verificationCode" placeholder="Enter 6-digit code">
+                                    </div>
+                                    <button type="button" class="btn btn--outline" id="resendCode">Resend Code</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--outline" id="prevStep" style="display: none;">Previous</button>
+                                <button type="button" class="btn btn--primary" id="nextStep">Next</button>
+                                <button type="submit" class="btn btn--primary" id="submitRegistration" style="display: none;">Complete Registration</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Content Section -->
+                <section id="content" class="section">
+                    <div class="section-header">
+                        <h2>Workshop Content Flow</h2>
+                        <p>Structured learning modules with progress tracking</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="modules-sidebar">
+                            <div class="modules-list" id="modulesList">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="content-main">
+                            <div class="current-module" id="currentModule">
+                                <h3>Module 3: Advanced Component Patterns</h3>
+                                <p>Learn about higher-order components, render props, and compound components.</p>
+                                
+                                <div class="module-materials">
+                                    <h4>Materials</h4>
+                                    <div class="materials-grid">
+                                        <div class="material-item">
+                                            <div class="material-icon">📹</div>
+                                            <div class="material-info">
+                                                <div class="material-title">Video Lecture</div>
+                                                <div class="material-meta">35 minutes</div>
+                                            </div>
+                                        </div>
+                                        <div class="material-item">
+                                            <div class="material-icon">💻</div>
+                                            <div class="material-info">
+                                                <div class="material-title">Code Examples</div>
+                                                <div class="material-meta">GitHub Repository</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="module-progress">
+                                    <div class="progress-info">
+                                        <span>Progress: 45%</span>
+                                        <span>15 min remaining</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tracking Section -->
+                <section id="tracking" class="section">
+                    <div class="section-header">
+                        <h2>Attendee Tracking</h2>
+                        <p>Real-time participant analytics and engagement metrics</p>
+                    </div>
+                    
+                    <div class="tracking-grid">
+                        <div class="card participants-card">
+                            <div class="card__header">
+                                <h3>Live Participants</h3>
+                                <div class="participant-count" id="participantCount">347</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="participants-list" id="participantsList">
+                                    <!-- Populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card engagement-chart">
+                            <div class="card__header">
+                                <h3>Engagement Over Time</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="chart-placeholder">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1749743770/pplx_project_search_images/d3083db2b5a2d9274c507295f329547da9a2a840.jpg" alt="Real-time event analytics dashboard" class="dashboard-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Feedback Section -->
+                <section id="feedback" class="section">
+                    <div class="section-header">
+                        <h2>Feedback & Certificates</h2>
+                        <p>Post-workshop feedback and certificate generation</p>
+                    </div>
+                    
+                    <div class="feedback-grid">
+                        <div class="card feedback-form-card">
+                            <div class="card__header">
+                                <h3>Workshop Feedback</h3>
+                            </div>
+                            <div class="card__body">
+                                <form class="feedback-form" id="feedbackForm">
+                                    <div class="form-group">
+                                        <label class="form-label">How would you rate the overall workshop content?</label>
+                                        <div class="rating-group">
+                                            <input type="radio" name="rating1" value="5" id="r1-5"><label for="r1-5">⭐⭐⭐⭐⭐</label>
+                                            <input type="radio" name="rating1" value="4" id="r1-4"><label for="r1-4">⭐⭐⭐⭐</label>
+                                            <input type="radio" name="rating1" value="3" id="r1-3"><label for="r1-3">⭐⭐⭐</label>
+                                            <input type="radio" name="rating1" value="2" id="r1-2"><label for="r1-2">⭐⭐</label>
+                                            <input type="radio" name="rating1" value="1" id="r1-1"><label for="r1-1">⭐</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">What topics would you like to see covered in future workshops?</label>
+                                        <textarea class="form-control" rows="3" placeholder="Share your suggestions..."></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">How likely are you to recommend this workshop to others?</label>
+                                        <div class="rating-group">
+                                            <input type="radio" name="recommend" value="5" id="rec-5"><label for="rec-5">Very Likely</label>
+                                            <input type="radio" name="recommend" value="4" id="rec-4"><label for="rec-4">Likely</label>
+                                            <input type="radio" name="recommend" value="3" id="rec-3"><label for="rec-3">Neutral</label>
+                                            <input type="radio" name="recommend" value="2" id="rec-2"><label for="rec-2">Unlikely</label>
+                                            <input type="radio" name="recommend" value="1" id="rec-1"><label for="rec-1">Very Unlikely</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn--primary">Submit Feedback</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="card certificate-card">
+                            <div class="card__header">
+                                <h3>Certificate</h3>
+                            </div>
+                            <div class="card__body">
+                                <div class="certificate-preview">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1749743770/pplx_project_search_images/7402f901bf0d34d91753122670709399970b9f18.jpg" alt="Certificate generation system" class="certificate-image">
+                                    <div class="certificate-info">
+                                        <h4>Advanced React Development Workshop</h4>
+                                        <p>Certificate of Completion</p>
+                                        <p><strong>Participant:</strong> Your Name</p>
+                                        <p><strong>Date:</strong> June 12, 2025</p>
+                                        <p><strong>Duration:</strong> 4 Hours</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-actions">
+                                    <button class="btn btn--primary">Download PDF</button>
+                                    <button class="btn btn--outline">Email Certificate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header" id="chatbotHeader">
+            <span>AI Workshop Assistant</span>
+            <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">Hello! I'm your workshop AI assistant. I can help you with questions about React development, current module content, or technical issues. What would you like to know?</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" class="form-control" id="chatInput" placeholder="Ask me anything about the workshop...">
+                <button class="btn btn--primary" id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Real-time Summarizer -->
+    <div class="summarizer" id="summarizer">
+        <div class="summarizer-header">
+            <h3>Live Session Summary</h3>
+            <div class="summarizer-status">
+                <span class="status status--success">Recording</span>
+                <button class="btn btn--sm btn--outline" id="exportSummary">Export</button>
+            </div>
+        </div>
+        <div class="summarizer-content" id="summaryContent">
+            <div class="summary-item">• Covered useState and useEffect hooks with practical examples</div>
+            <div class="summary-item">• Discussed common pitfalls in hook usage and how to avoid them</div>
+            <div class="summary-item">• Implemented custom hooks for reusable logic</div>
+            <div class="summary-item">• Q&A session addressed dependency arrays in useEffect</div>
+            <div class="summary-item">• Live coding demonstration of hook composition patterns</div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Success!</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Action completed successfully!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--primary" id="modalOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

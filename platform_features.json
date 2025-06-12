@@ -1,0 +1,49 @@
+{
+  "Registration_System": {
+    "Fields": "10 max customizable fields",
+    "Authentication": "Email + OTP verification",
+    "Integration": "Single Sign-On support",
+    "Validation": "Real-time form validation",
+    "Capacity": "500 concurrent registrations"
+  },
+  "Content_Flow_UI": {
+    "Structure": "Module-based navigation",
+    "Materials": "PDFs, videos, links, presentations",
+    "Progress_Tracking": "Real-time completion status",
+    "Accessibility": "WCAG 2.1 compliant",
+    "Mobile_Support": "Responsive design"
+  },
+  "AI_Chatbot": {
+    "Context_Awareness": "Workshop-specific knowledge",
+    "Response_Time": "<2 seconds average",
+    "Languages": "Multi-language support",
+    "Integration": "Embedded chat widget",
+    "Training_Data": "Workshop materials + FAQs"
+  },
+  "Real_Time_Summarizer": {
+    "Audio_Processing": "Whisper API integration",
+    "Text_Analysis": "Gemini for summarization",
+    "Update_Frequency": "Every 30 seconds",
+    "Output_Format": "Bullet points + key highlights",
+    "Storage": "Session-based with export options"
+  },
+  "Attendee_Tracking": {
+    "Metrics": [
+      "Login time",
+      "Module access",
+      "Engagement duration",
+      "Questions asked"
+    ],
+    "Real_Time_Dashboard": "Live participant monitoring",
+    "Export_Options": "CSV, PDF reports",
+    "Privacy_Compliance": "GDPR + CCPA compliant",
+    "Analytics": "Detailed engagement analytics"
+  },
+  "Feedback_Certificate": {
+    "Feedback_Form": "Customizable post-event survey",
+    "Certificate_Generation": "Automated PDF creation",
+    "Delivery": "Email + download options",
+    "Templates": "Customizable design templates",
+    "Verification": "QR code + blockchain verification"
+  }
+}

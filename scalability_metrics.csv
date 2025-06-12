@@ -1,0 +1,11 @@
+Metric,Target (100 users),Target (500 users),Infrastructure
+Concurrent Users,100 simultaneous,500 simultaneous,Auto-scaling pods
+API Response Time,<150ms,<200ms,Load balancer + CDN
+Database Queries/sec,"1,000 QPS","5,000 QPS",Read replicas
+Memory Usage,2GB RAM,8GB RAM,Memory-optimized instances
+CPU Utilization,< 50%,< 70%,Horizontal scaling
+Storage Requirements,10GB storage,50GB storage,S3 + CloudFront
+Bandwidth per User,1 Mbps,2 Mbps,Adaptive bitrate
+WebSocket Connections,100 connections,500 connections,Connection pooling
+Cache Hit Rate,> 85%,> 90%,Redis cluster
+Uptime SLA,99.5%,99.9%,Multi-AZ deployment

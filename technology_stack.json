@@ -1,0 +1,30 @@
+{
+  "Frontend": {
+    "Primary": "React 18 with TypeScript",
+    "Styling": "Tailwind CSS + Headless UI",
+    "State": "Zustand for lightweight state management",
+    "Real_Time": "Socket.io-client for live updates",
+    "Build": "Vite for fast development"
+  },
+  "Backend": {
+    "Runtime": "Node.js 18+ with Express",
+    "Database": "PostgreSQL 15+ with Prisma ORM",
+    "Cache": "Redis 7+ for sessions and real-time data",
+    "Queue": "Bull Queue for background jobs",
+    "File_Storage": "AWS S3 with CloudFront CDN"
+  },
+  "DevOps": {
+    "Containerization": "Docker with multi-stage builds",
+    "Orchestration": "Kubernetes or Docker Swarm",
+    "CI_CD": "GitHub Actions or GitLab CI",
+    "Monitoring": "Datadog or New Relic",
+    "Logging": "ELK Stack (Elasticsearch, Logstash, Kibana)"
+  },
+  "AI_Services": {
+    "Speech_to_Text": "OpenAI Whisper API",
+    "Text_Summarization": "Google Gemini API",
+    "Chatbot_LLM": "OpenAI GPT-4 or Claude",
+    "Vector_Database": "Pinecone for embeddings",
+    "Knowledge_Processing": "LangChain for RAG implementation"
+  }
+}

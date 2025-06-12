@@ -1,0 +1,37 @@
+{
+  "Frontend_Layer": {
+    "Framework": "React 18+",
+    "UI_Components": "Material-UI / Ant Design",
+    "State_Management": "Redux Toolkit / Zustand",
+    "Real_Time": "Socket.io-client",
+    "Authentication": "JWT + OTP verification",
+    "Embedding": "Iframe + postMessage API"
+  },
+  "Backend_Layer": {
+    "API_Gateway": "Express.js / Fastify",
+    "Microservices": [
+      "Auth Service",
+      "Workshop Service",
+      "Chat Service",
+      "Analytics Service",
+      "Certificate Service"
+    ],
+    "Real_Time_Engine": "Socket.io / WebSockets",
+    "AI_Integration": "OpenAI API / Gemini API",
+    "Database": "PostgreSQL + Redis (cache)",
+    "File_Storage": "AWS S3 / Cloudinary"
+  },
+  "AI_Features": {
+    "Chatbot": "Context-aware with workshop knowledge base",
+    "Whisper_Integration": "Real-time speech-to-text",
+    "Gemini_Summarizer": "Live contextual summaries",
+    "Knowledge_Base": "Vector embeddings for quick retrieval"
+  },
+  "Infrastructure": {
+    "Container_Platform": "Docker + Kubernetes",
+    "Load_Balancer": "NGINX / AWS ALB",
+    "CDN": "CloudFlare / AWS CloudFront",
+    "Monitoring": "Prometheus + Grafana",
+    "Scaling": "Horizontal pod autoscaling"
+  }
+}
